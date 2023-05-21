@@ -1,0 +1,443 @@
+/* CSS de base */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Courier Prime", monospace;
+  color: #0e131f;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: #0e131f;
+}
+
+body {
+  background-color: #eef1ef;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS Générale pour les titres de section */
+
+.vague {
+  position: relative;
+}
+
+.vague h3 {
+  position: relative;
+  display: inline-block;
+  color: #0279e8;
+  font-size: 2.5em;
+  letter-spacing: 0px;
+  animation: vague_texte 5s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes vague_texte {
+  0% {
+    transform: translateY(0px);
+    color: #0279e8;
+  }
+
+  4% {
+    transform: translateY(-20px);
+  }
+
+  8% {
+    transform: translateY(0px);
+  }
+
+  70% {
+    color: #f39f18;
+    text-shadow: 0px 0px 10px #f39f18;
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS Top-Page */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../assets/img/mer_gruissan.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 93%, 0 100%);
+}
+
+header h1 {
+  width: 85%;
+  font-size: 4em;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+header .titre1 {
+  color: black;
+  text-shadow: 0px 0px 10px black;
+  animation: depart 3s linear;
+}
+
+@keyframes depart {
+  0% {
+    font-size: 0em;
+    transform: translateY(105px);
+  }
+
+  45% {
+    font-size: 4em;
+    transform: translateY(105px);
+  }
+
+  60% {
+    transform: translateY(105px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+header .titre2 {
+  animation: depart2 3.5s linear;
+  color: #eef1ef;
+}
+
+@keyframes depart2 {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS de la partie 1 =  À propos */
+
+.partie1 {
+  margin-top: 15px;
+}
+
+.partie1 .boite1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.partie1 .boite1 p {
+  margin-top: 18px;
+  font-size: 1.2em;
+  width: 90%;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS de la partie 2 = Nos Menus */
+
+.partie2 {
+  margin-top: 50px;
+}
+
+.partie2 .boite2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.partie2 .boite2 .menu-carte {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.partie2 .boite2 .menu-carte .carte {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 15px 0;
+  background: #eef1ef;
+  border-radius: 25px;
+  box-shadow: 7.5px 7.5px 15px #d0d3d1, -7.5px -7.5px 15px #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.partie2 .boite2 .menu-carte .carte h2 {
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;
+  transition: 0.5s;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.partie2 .boite2 .menu-carte .carte:hover h2 {
+  opacity: 0;
+}
+
+.partie2 .boite2 .menu-carte .carte .information {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.partie2 .boite2 .menu-carte .carte:hover {
+  width: 290px;
+  height: 400px;
+}
+
+.partie2 .boite2 .menu-carte .carte .information:hover img {
+  opacity: 1;
+}
+
+.partie2 .boite2 .menu-carte .carte .information:hover p {
+  opacity: 1;
+}
+
+/* CSS des infos interne des cartes  */
+
+.partie2 .boite2 .menu-carte .carte .information img {
+  margin-left: 7px;
+  margin-top: 10px;
+  width: 95%;
+  border-radius: 25px;
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.partie2 .boite2 .menu-carte .carte .information p {
+  width: 95%;
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS de la partie 3 = Renseignement */
+
+.partie3 {
+  margin-top: 25px;
+}
+
+.partie3 .boite3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.partie3 .boite3 img {
+  margin-top: 20px;
+  width: 90%;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+
+.partie3 .boite3 h3 {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+}
+
+.partie3 .boite3 p {
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.partie3 .boite3 a {
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.partie3 .boite3 a {
+  margin: 20px;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 162px;
+  background: #eef1ef;
+  box-shadow: 7.5px 7.5px 15px #d0d3d1, -7.5px -7.5px 15px #ffffff;
+}
+
+.partie3 .boite3 a:hover {
+  box-shadow: inset 7.5px 7.5px 15px #d0d3d1, inset -7.5px -7.5px 15px #ffffff;
+}
+
+.partie3 .boite3 a .navigation {
+  color: #0279e8;
+}
+
+.partie3 .boite3 a .tel {
+  color: #03b400;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS de la partie 4 = Réseaux */
+
+footer {
+  margin-top: 55px;
+}
+
+footer .boite4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+footer .boite4 .boite-reseaux {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .boite4 .boite-reseaux ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .boite4 .boite-reseaux li {
+  margin: 20px;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 162px;
+  background: #eef1ef;
+  box-shadow: 7.5px 7.5px 15px #d0d3d1, -7.5px -7.5px 15px #ffffff;
+}
+
+footer .boite4 .boite-reseaux li:hover {
+  box-shadow: inset 7.5px 7.5px 15px #d0d3d1, inset -7.5px -7.5px 15px #ffffff;
+}
+
+footer .boite4 .boite-reseaux ul li a {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  width: 125px;
+}
+
+/* Couleur des différents réseaux */
+
+footer .boite4 .boite-reseaux ul li:nth-child(1) a {
+  color: #dd2a7b;
+}
+
+footer .boite4 .boite-reseaux ul li:nth-child(2) a {
+  color: #0080f7;
+}
+
+footer .boite4 .boite-reseaux ul li:nth-child(3) a {
+  color: #00aa6c;
+}
+
+footer .boite4 p {
+  color: #0e131f;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+footer .boite4 p a {
+  color: #0e131f;
+  font-size: 1.1em;
+  text-shadow: 0px 0px 10px #0e131f;
+  transition: 0.5s;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/* CSS responsive */
+
+@media screen and (min-width: 801px) {
+  .partie3 .boite3 img {
+    width: 500px;
+  }
+
+  footer .boite4 .boite-reseaux ul {
+    flex-direction: row;
+  }
+
+  .partie2 .boite2 .menu-carte {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 1884px) {
+  header {
+    width: 99vw;
+  }
+}
