@@ -1,4 +1,4 @@
-/* CSS de base */
+/* Basic CSS */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
 
@@ -33,7 +33,7 @@ body {
 
 /*-------------------------------------------------------------------------------*/
 
-/* CSS Générale pour les titres de section */
+/* General CSS for section titles */
 
 .vague {
   position: relative;
@@ -45,11 +45,11 @@ body {
   color: #0279e8;
   font-size: 2.5em;
   letter-spacing: 0px;
-  animation: vague_texte 5s ease-in-out infinite;
+  animation: vague_text 5s ease-in-out infinite;
   animation-delay: calc(0.1s * var(--i));
 }
 
-@keyframes vague_texte {
+@keyframes vague_text {
   0% {
     transform: translateY(0px);
     color: #0279e8;
@@ -84,7 +84,7 @@ header {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-image: url(../assets/img/mer_gruissan.jpg);
+  background-image: url(../assets/img/gruissanSea.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0%, 100% 93%, 0 100%);
@@ -98,13 +98,13 @@ header h1 {
   line-height: 110%;
 }
 
-header .titre1 {
+header .title1 {
   color: black;
   text-shadow: 0px 0px 10px black;
-  animation: depart 3s linear;
+  animation: title1Animation 3s linear;
 }
 
-@keyframes depart {
+@keyframes title1Animation {
   0% {
     font-size: 0em;
     transform: translateY(105px);
@@ -124,12 +124,12 @@ header .titre1 {
   }
 }
 
-header .titre2 {
-  animation: depart2 3.5s linear;
+header .title2 {
+  animation: title2Animation 3.5s linear;
   color: #eef1ef;
 }
 
-@keyframes depart2 {
+@keyframes title2Animation {
   0% {
     opacity: 0;
   }
@@ -145,13 +145,13 @@ header .titre2 {
 
 /*-------------------------------------------------------------------------------*/
 
-/* CSS de la partie 1 =  À propos */
+/* Part 1 CSS = About */
 
-.partie1 {
+.part1 {
   margin-top: 15px;
 }
 
-.partie1 .boite1 {
+.part1 .box1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +159,7 @@ header .titre2 {
   text-align: center;
 }
 
-.partie1 .boite1 p {
+.part1 .box1 p {
   margin-top: 18px;
   font-size: 1.2em;
   width: 90%;
@@ -169,13 +169,13 @@ header .titre2 {
 
 /*-------------------------------------------------------------------------------*/
 
-/* CSS de la partie 2 = Nos Menus */
+/* Part 2 CSS = Our Menus */
 
-.partie2 {
+.part2 {
   margin-top: 50px;
 }
 
-.partie2 .boite2 {
+.part2 .box2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,7 +183,7 @@ header .titre2 {
   text-align: center;
 }
 
-.partie2 .boite2 .menu-carte {
+.part2 .box2 .menu-card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -194,7 +194,7 @@ header .titre2 {
   margin-top: 20px;
 }
 
-.partie2 .boite2 .menu-carte .carte {
+.part2 .box2 .menu-card .map {
   position: relative;
   width: 125px;
   height: 125px;
@@ -209,7 +209,7 @@ header .titre2 {
   transition: 0.5s;
 }
 
-.partie2 .boite2 .menu-carte .carte h2 {
+.part2 .box2 .menu-card .map h2 {
   position: absolute;
   pointer-events: none;
   opacity: 1;
@@ -218,11 +218,11 @@ header .titre2 {
   font-weight: bold;
 }
 
-.partie2 .boite2 .menu-carte .carte:hover h2 {
+.part2 .box2 .menu-card .map:hover h2 {
   opacity: 0;
 }
 
-.partie2 .boite2 .menu-carte .carte .information {
+.part2 .box2 .menu-card .map .information {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -231,22 +231,22 @@ header .titre2 {
   width: 100%;
 }
 
-.partie2 .boite2 .menu-carte .carte:hover {
+.part2 .box2 .menu-card .map:hover {
   width: 290px;
   height: 400px;
 }
 
-.partie2 .boite2 .menu-carte .carte .information:hover img {
+.part2 .box2 .menu-card .map .information:hover img {
   opacity: 1;
 }
 
-.partie2 .boite2 .menu-carte .carte .information:hover p {
+.part2 .box2 .menu-card .map .information:hover p {
   opacity: 1;
 }
 
-/* CSS des infos interne des cartes  */
+/* Cards internal info CSS  */
 
-.partie2 .boite2 .menu-carte .carte .information img {
+.part2 .box2 .menu-card .map .information img {
   margin-left: 7px;
   margin-top: 10px;
   width: 95%;
@@ -256,7 +256,7 @@ header .titre2 {
   pointer-events: none;
 }
 
-.partie2 .boite2 .menu-carte .carte .information p {
+.part2 .box2 .menu-card .map .information p {
   width: 95%;
   text-align: center;
   margin: auto;
@@ -267,13 +267,13 @@ header .titre2 {
 
 /*-------------------------------------------------------------------------------*/
 
-/* CSS de la partie 3 = Renseignement */
+/* Part 3 CSS = Information */
 
-.partie3 {
+.part3 {
   margin-top: 25px;
 }
 
-.partie3 .boite3 {
+.part3 .box3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,32 +281,32 @@ header .titre2 {
   text-align: center;
 }
 
-.partie3 .boite3 img {
+.part3 .box3 img {
   margin-top: 20px;
   width: 90%;
   border-radius: 25px;
   border: 2px solid black;
 }
 
-.partie3 .boite3 h3 {
+.part3 .box3 h3 {
   margin-top: 25px;
   font-weight: bold;
   font-size: 2.3em;
   letter-spacing: 2px;
 }
 
-.partie3 .boite3 p {
+.part3 .box3 p {
   font-size: 1.2em;
   font-weight: 500;
   letter-spacing: 2px;
 }
 
-.partie3 .boite3 a {
+.part3 .box3 a {
   font-size: 2em;
   margin-top: 10px;
 }
 
-.partie3 .boite3 a {
+.part3 .box3 a {
   margin: 20px;
   height: 75px;
   width: 75px;
@@ -318,27 +318,27 @@ header .titre2 {
   box-shadow: 7.5px 7.5px 15px #d0d3d1, -7.5px -7.5px 15px #ffffff;
 }
 
-.partie3 .boite3 a:hover {
+.part3 .box3 a:hover {
   box-shadow: inset 7.5px 7.5px 15px #d0d3d1, inset -7.5px -7.5px 15px #ffffff;
 }
 
-.partie3 .boite3 a .navigation {
+.part3 .box3 a .navigation {
   color: #0279e8;
 }
 
-.partie3 .boite3 a .tel {
+.part3 .box3 a .tel {
   color: #03b400;
 }
 
 /*-------------------------------------------------------------------------------*/
 
-/* CSS de la partie 4 = Réseaux */
+/* Part 4 CSS = Networks */
 
 footer {
   margin-top: 55px;
 }
 
-footer .boite4 {
+footer .box4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,21 +346,21 @@ footer .boite4 {
   margin-top: 35px;
 }
 
-footer .boite4 .boite-reseaux {
+footer .box4 .network-box {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer .boite4 .boite-reseaux ul {
+footer .box4 .network-box ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-footer .boite4 .boite-reseaux li {
+footer .box4 .network-box li {
   margin: 20px;
   height: 75px;
   width: 75px;
@@ -372,11 +372,11 @@ footer .boite4 .boite-reseaux li {
   box-shadow: 7.5px 7.5px 15px #d0d3d1, -7.5px -7.5px 15px #ffffff;
 }
 
-footer .boite4 .boite-reseaux li:hover {
+footer .box4 .network-box li:hover {
   box-shadow: inset 7.5px 7.5px 15px #d0d3d1, inset -7.5px -7.5px 15px #ffffff;
 }
 
-footer .boite4 .boite-reseaux ul li a {
+footer .box4 .network-box ul li a {
   font-size: 2em;
   display: flex;
   justify-content: center;
@@ -387,19 +387,19 @@ footer .boite4 .boite-reseaux ul li a {
 
 /* Couleur des différents réseaux */
 
-footer .boite4 .boite-reseaux ul li:nth-child(1) a {
+footer .box4 .network-box ul li:nth-child(1) a {
   color: #dd2a7b;
 }
 
-footer .boite4 .boite-reseaux ul li:nth-child(2) a {
+footer .box4 .network-box ul li:nth-child(2) a {
   color: #0080f7;
 }
 
-footer .boite4 .boite-reseaux ul li:nth-child(3) a {
+footer .box4 .network-box ul li:nth-child(3) a {
   color: #00aa6c;
 }
 
-footer .boite4 p {
+footer .box4 p {
   color: #0e131f;
   text-align: center;
   margin-top: 25px;
@@ -409,7 +409,7 @@ footer .boite4 p {
   letter-spacing: 2px;
 }
 
-footer .boite4 p a {
+footer .box4 p a {
   color: #0e131f;
   font-size: 1.1em;
   text-shadow: 0px 0px 10px #0e131f;
@@ -421,15 +421,15 @@ footer .boite4 p a {
 /* CSS responsive */
 
 @media screen and (min-width: 801px) {
-  .partie3 .boite3 img {
+  .part3 .box3 img {
     width: 500px;
   }
 
-  footer .boite4 .boite-reseaux ul {
+  footer .box4 .network-box ul {
     flex-direction: row;
   }
 
-  .partie2 .boite2 .menu-carte {
+  .part2 .box2 .menu-card {
     flex-direction: row;
     justify-content: space-around;
     width: 90vw;
