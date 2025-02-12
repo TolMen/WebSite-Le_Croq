@@ -13,8 +13,8 @@
 
 ---
 
-Thank you for taking the time to explore this project. 
-Feel free to explore, learn, and modify it ! ✨
+Thank you for taking the time to explore this project. <br>
+Feel free to explore, learn, and modify it ! ✨ <br>
 For any questions or collaboration, feel free to reach out ! 📩
 
 [TolMen](https://github.com/TolMen) - [LinkedIn](https://www.linkedin.com/in/jessyfrachisse/)
