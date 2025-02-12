@@ -1,6 +1,6 @@
 # WebSite-Le_Croq 🍽️
 
-> **Un projet personnel pour expérimenter avec le HTML et le CSS.**  
+> **Un projet personnel pour expérimenter le HTML et le CSS.**  
 > --> *Version : [English](README.md)* 📖
 
 ## Description
